@@ -4,10 +4,14 @@ import cardImg from '../assets/card.svg'
 
 const Header = () => {
 return(
-  <nav className="flex items-center justify-between flex-wrap bg-amber-300 p-4">
+  <nav className="flex items-center justify-between flex-wrap bg-gray-blue p-4 min-h-[13vh]">
     <div className="flex items-center flex-shrink-0 text-white mr-6">
-      <img src={cardImg} alt='Nav_Icon' className="max-h-12"/>
-        <a href='/' className="font-semibold text-xl tracking-wider ml-3 text-zinc-950">洋羽紫靈</a>
+      <a href='/'>
+        <img src={cardImg} alt='Nav_Icon' className="max-h-12"/>
+      </a>
+        <a href='/' className="font-semibold text-xl tracking-wider ml-3 text-zinc-950">
+          洋羽紫靈
+          </a>
     </div>
   </nav>
 )}

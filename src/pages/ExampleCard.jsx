@@ -6,7 +6,7 @@ const ExampleCard = () => {
 const Card = ({ children }) => {
   return <div className={classes.card}>{children}</div>;
 };
-
+//////////////// 被選會出現的框架
 const SelectableCard = ({ selected, onClick, children }) => {
   const isSelected = selected ? `${classes.selected}` : '';
   const className = `${classes.selectable} ${isSelected}`;
@@ -51,8 +51,8 @@ const SelectableCardList = ({ contents, multiple, maxSelectable, onChange }) => 
       }
       setSelected(selectedIndexes);
     } else {
-      onChange(index);
       setSelected(index);
+      onChange(index);
     }
   };
 
@@ -76,8 +76,8 @@ const SelectableCardList = ({ contents, multiple, maxSelectable, onChange }) => 
 const Example = ({ title, cardContents, multiple, maxSelectable }) => {
   const [selected, setSelected] = useState([]);
 
-  const onListChanged = (selected) => {
-    setSelected(selected);
+  const onListChanged = (card) => {
+    setSelected(card);
   };
 
   const submit = () => {

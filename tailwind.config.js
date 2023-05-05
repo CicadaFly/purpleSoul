@@ -12,8 +12,13 @@ export default {
         lg: '4rem',
         xl: '5rem',
         '2xl': '6rem',
+      }},
+    extend: {
+      flexBasis: {
+        '1/7': '14.2857143%',},
+      colors: {
+        'gray-blue': '#9fbfdf',
       },
-    extend: {},
-  },
+    },
   plugins: [],
 }}

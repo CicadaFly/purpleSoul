@@ -9,7 +9,8 @@ const DataSlice = createSlice({
     userName: "",
     userText: "",
     userId: "",
-    Card: []
+    Card: [],
+    secondRow: []
   },
   reducers: {
     addUser(state, action){
@@ -18,8 +19,11 @@ const DataSlice = createSlice({
       state.userId = nanoid(8)
     },
     addCard(state, action){
-      state.push(action.payload)
-    } //假定push的就是卡片的index(或ID)
+      state.Card = action.payload
+    },
+    addRow(state, action){
+      state.secondRow = action.payload
+    }
   }
 })
 

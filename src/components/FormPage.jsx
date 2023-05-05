@@ -1,16 +1,21 @@
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { addUser } from "../store";
 const FormPage = () => {
+  const dispatch = useDispatch()
   const navigate = useNavigate()
   const formSubmitHandler = (e) =>{
     e.preventDefault()
     console.log(e.target.name.value, e.target.question.value)
-    navigate('./Divine')
+    const userName = e.target.name.value
+    const userText = e.target.question.value
+    dispatch(addUser({userName,userText}))
+    navigate('/divine')
   }
   return (
-    <form className="max-w-xl mx-auto mt-10 bg-cyan-300 rounded" onSubmit={formSubmitHandler}>
+    <form className="max-w-xl mx-auto mt-10 bg-[#3973ac] rounded" onSubmit={formSubmitHandler}>
       <div className="mb-4 pt-1">
-        <label className="block text-gray-700 font-bold mx-2" htmlFor="name">
+        <label className="block text-white font-bold mx-2" htmlFor="name">
           稱呼
         </label>
         <input
@@ -22,7 +27,7 @@ const FormPage = () => {
       </div>
       <div className="mb-6">
         <label
-          className="block text-gray-700 font-bold mx-2"
+          className="block text-white font-bold mx-2"
           htmlFor="question"
         >
           想問什麼
