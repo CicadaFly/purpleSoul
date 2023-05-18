@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import border from "../assets/result.png"
 
 const Result = () =>{
   const {name, question, id, card, secondRow} = useSelector((state)=>(
@@ -15,15 +16,30 @@ const Result = () =>{
                       "一","二","三","四","五","六","七","八","九","十","十一","十二"]
 
   return (
-    <div className="container">
-    <h1>Here is Result</h1>
-    <p>你的名字是: {name}</p>
-    <p>你的問題是: {question}</p>
-    <p>你的占卜結果如下:</p>
-    <p>主星卡: {resultCard[card[0]-1]}</p>
-    <p>輔星卡: {resultCard[card[1]-1]}</p>
-    <p>十二神牌卡: {resultCard[card[2]-1]}</p>
+    <>
+    <div className="container flex justify-center">
+      <div style={{
+        position:"absolute",
+        zIndex: 99,
+        backgroundImage: `url(${border})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+        className="w-[50vw] sm:max-w-lg sm:min-h-40">
+        <div className="py-20 px-10 break-words">
+          <h1>Here is Result</h1>
+          <p>你的名字是: {name}</p>
+          <p className="text-ellipsis">你的問題是: {question}</p>
+          <p>你的占卜結果如下:</p>
+          <p>主星卡: {resultCard[card[0]-1]}</p>
+          <p>輔星卡: {resultCard[card[1]-1]}</p>
+          <p>十二神牌卡: {resultCard[card[2]-1]}</p>
+        </div>
     </div>
+    </div>
+    </>
+
   )
 }
 

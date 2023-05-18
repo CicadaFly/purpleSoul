@@ -7,12 +7,12 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Backend from './pages/Backend'
 import ErrorPage from './pages/ErrorPage'
-// 流程是Home即是Form，submit後切換到Divine，最後post的同時到result
-// 還欠一個404頁面  <Route path="*" element={<NotFound />} />
+
+
 
 function App() {
   return(
-    <div className='flex flex-col'>
+    <div className='flex flex-col relative'>
       <Header/>
       <main className='min-h-[80vh]'>
         <BrowserRouter>
@@ -25,7 +25,9 @@ function App() {
           </Routes>
         </BrowserRouter>
       </main>
-      <Footer/>
+      <div className='relative bottom-0 w-full'>
+        <Footer/>
+      </div>
     </div>
   )
 }
