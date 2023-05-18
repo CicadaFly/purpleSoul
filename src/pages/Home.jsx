@@ -6,9 +6,9 @@ import {AiOutlineCaretUp,AiOutlineCaretDown} from  "react-icons/ai";
 const Home = () =>{
   const [intro, setIntro] = useState(false)
   return (
-    <div className="container">
+    <div className="container bg-[#fdfefd]">
     <div className="mt-2 flex justify-center">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-md flex flex-row" onClick={(e)=>{setIntro(!intro)}}>
+      <button className="bg-[#8fbfdc] hover:bg-slate-500 text-white font-bold py-2 px-8 rounded-md flex flex-row" onClick={(e)=>{setIntro(!intro)}}>
         <span>說明</span>
         {!intro ? <AiOutlineCaretUp className="ml-1 self-center"/> : <AiOutlineCaretDown className="ml-1 self-center"/>}        
         </button>

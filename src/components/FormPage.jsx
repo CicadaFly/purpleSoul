@@ -16,9 +16,9 @@ const FormPage = () => {
     }
   }
   return (
-    <form className="max-w-xl mx-auto mt-10 bg-[#3973ac] rounded mb-2" onSubmit={formSubmitHandler}>
+    <form className="max-w-xl mx-auto mt-10 bg-[#98afbd] rounded mb-2" onSubmit={formSubmitHandler}>
       <div className="mb-4 pt-1">
-        <label className="block text-white font-bold mx-2 mb-1" htmlFor="name">
+        <label className="block text-black font-bold mx-2 mb-1" htmlFor="name">
           稱呼
         </label>
         <input
@@ -30,7 +30,7 @@ const FormPage = () => {
       </div>
       <div className="mb-6">
         <label
-          className="block text-white font-bold mx-2 mb-1"
+          className="block text-black font-bold mx-2 mb-1"
           htmlFor="question"
         >
           想問什麼
@@ -44,7 +44,7 @@ const FormPage = () => {
       </div>
       <div className="flex justify-center">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-[#8fbfdc] hover:bg-slate-500 text-black font-bold py-2 px-4 mb-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
           送出

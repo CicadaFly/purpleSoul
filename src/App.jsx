@@ -5,7 +5,6 @@ import Divine from './pages/Divine'
 import Result from './pages/Result'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Backend from './pages/Backend'
 import ErrorPage from './pages/ErrorPage'
 
 
@@ -20,7 +19,6 @@ function App() {
             <Route exact path="/" element={<Home/>} />
             <Route path="/divine" element={<Divine/>} />
             <Route path="/result" element={<Result/>} />
-            <Route path="/sicenonly" element={<Backend/>}/>
             <Route path='/*' element={<ErrorPage/>}/>
           </Routes>
         </BrowserRouter>

@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const CardRow = ({rowArray,cardImage,cardSelected})=> {
 const [selected, setSelected] = useState(-1)
-const selecting = "border-4 border-blue-700"
+const selecting = "border-4 border-indigo-700"
 const selectorHandler = (i,card) =>{
   setSelected(i)
   cardSelected(card)

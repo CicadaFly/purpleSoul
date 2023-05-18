@@ -12,7 +12,7 @@ const Backend = () => {
 
   const handlePasswordSubmit = (event) => {
     event.preventDefault();
-    //岑岑的後台
+
     if (password === 'hp6hp62k7c.4w96') {
       setIsAuthenticated(true);
     }
