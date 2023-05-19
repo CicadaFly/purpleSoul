@@ -9,8 +9,8 @@ return(
       <a href='/purpleSoul/'>
         <img src={cardImg} alt='Nav_Icon' className="max-h-12 px-3"/>
       </a>
-        <a href='/purpleSoul/' className="font-semibold text-xl tracking-wider ml-1 text-zinc-950">
-          洋羽紫靈
+        <a href='/purpleSoul/' className="font-bold text-2xl tracking-wider ml-1 text-zinc-950">
+          洋羽占卜鋪
           </a>
       <a href="https://www.instagram.com/tarot_celine/" target="_blank" className="absolute right-[3rem]">
       <AiOutlineInstagram size={"2rem"} className='text-black ml-8'/>

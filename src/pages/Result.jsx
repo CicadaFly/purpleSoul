@@ -17,10 +17,10 @@ const Result = () =>{
   let addingOne = "," + resultCard[31] + "(由於您抽到天馬牌，所以會多一張牌)"
   return (
     <>
-    <div className="container flex justify-center bg-[#fdfefd]">
+    <div className="container flex flex-row justify-center bg-[#fdfefd]">
       <img src={border} className="absolute max-h-[70vh] bg-[#88bad9] rounded-md mt-2"/>
      
-        <div className="py-[4rem] break-words" style={{zIndex: 20,width: "20em",marginLeft:" 3rem",marginTop: "2rem",marginRight: "3rem"}}>
+        <div className="py-[4rem] flex flex-col break-words" style={{zIndex: 20,width: "20em",marginLeft:" 3rem",marginTop: "2rem",marginRight: "3rem"}}>
           <h1 className="text-lg text-center font-semibold">占卜結果</h1>
           <p className="my-1">你的名字是: {name}</p>
           <p className="my-1 text-ellipsis">你的問題是: {question}</p>
@@ -29,9 +29,11 @@ const Result = () =>{
           <p className="my-1">主星卡: {resultCard[card[0]-1]}</p>
           <p className="my-1">輔星卡: {resultCard[card[1]-1]}{card.length>3 && addingOne}</p>
           <p className="my-1">十二神牌卡: {resultCard[card[2]-1]}</p>
+          <hr className="my-3 border-dashed border-t-1 w-[60%] justify-self-center"/>
+          <div className="mt-8 text-center" style={{zIndex: 20}}>
+            <p className="text-xs">請將此畫面截圖並傳送給占卜小姐姐</p>
+          </div>
         </div>
-
-
     </div>
     </>
 
