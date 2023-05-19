@@ -16,7 +16,7 @@ const FormPage = () => {
     }
   }
   return (
-    <form className="max-w-xl mx-auto mt-10 bg-[#98afbd] rounded mb-2" onSubmit={formSubmitHandler}>
+    <form className="max-w-xl mx-auto mt-7 bg-[#98afbd] rounded mb-2" onSubmit={formSubmitHandler}>
       <div className="mb-4 pt-1">
         <label className="block text-black font-bold mx-2 mb-1" htmlFor="name">
           稱呼
