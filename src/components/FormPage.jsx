@@ -6,7 +6,6 @@ const FormPage = () => {
   const navigate = useNavigate()
   const formSubmitHandler = (e) =>{
     e.preventDefault()
-    console.log(e.target.name.value, e.target.question.value)
     const userName = e.target.name.value
     const userText = e.target.question.value
     if (userName && userText !== ""){

@@ -28,7 +28,8 @@ const Divine = () => {
     if (data.some((e)=>e===0)){
       alert("請在各區域都挑選一張")
     } else if (data[1] === 32) {
-      data[1] = Math.round(Math.random() * (31 - 15)) + 15 
+      data[1] = Math.round(Math.random() * (31 - 15)) + 15
+      data.push("add1") 
       dispatch(addCard(data))
       navigate('/result')
     } else {
@@ -36,7 +37,7 @@ const Divine = () => {
     navigate('/result')
   }
   }
-  console.log(secondRow)
+  // console.log(secondRow)
 
   return (
     <>
