@@ -1,5 +1,5 @@
 import './App.css'
-import {Routes, BrowserRouter, Route} from 'react-router-dom'
+import {Routes, HashRouter, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import Divine from './pages/Divine'
 import Result from './pages/Result'
@@ -14,14 +14,14 @@ function App() {
     <div className='flex flex-col relative'>
       <Header/>
       <main className='min-h-[80vh]'>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route path="/divine" element={<Divine/>} />
             <Route path="/result" element={<Result/>} />
             <Route path='/*' element={<ErrorPage/>}/>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </main>
       <div className='relative bottom-0 w-full'>
         <Footer/>
