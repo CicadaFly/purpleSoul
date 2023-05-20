@@ -29,7 +29,7 @@ const Result = () =>{
           <p className="my-1">主星卡: {resultCard[card[0]-1]}</p>
           <p className="my-1">輔星卡: {resultCard[card[1]-1]}{card.length>3 && addingOne}</p>
           <p className="my-1">十二神牌卡: {resultCard[card[2]-1]}</p>
-          <hr className="my-3 border-dashed border-t-1 w-[60%] justify-self-center"/>
+          <hr className="my-3 border-dashed border-t w-[60%] self-center"/>
           <div className="mt-8 text-center" style={{zIndex: 20}}>
             <p className="text-xs">請將此畫面截圖並傳送給占卜小姐姐</p>
           </div>
